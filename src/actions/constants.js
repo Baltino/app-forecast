@@ -3,5 +3,5 @@ export const AJAX_STATUS = {
   loading: 'loading',
   error: 'error',
   success: 'success',
-  ready: 'ready'
+  ready: 'ready',
 };

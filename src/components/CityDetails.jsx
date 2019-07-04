@@ -8,7 +8,11 @@ import LocationMap from './Map';
 
 
 function CityDetails(props) {
-  const { city: { name, coord, main, weather }, loading } = props;
+  const {
+    city: {
+      name, coord, main, weather,
+    }, loading,
+  } = props;
   if (loading) {
     return <Row> Searching.. </Row>;
   }

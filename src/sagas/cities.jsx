@@ -1,5 +1,7 @@
 // npm packages
-import { takeLatest, call, put, select } from 'redux-saga/effects';
+import {
+  takeLatest, call, put, select,
+} from 'redux-saga/effects';
 
 import {
   actionTypes,

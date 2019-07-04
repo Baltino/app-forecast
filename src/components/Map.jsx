@@ -7,8 +7,8 @@ const AnyReactComponent = () => (
 );
 
 const LocationMap = ({ coord }) => {
-  const loc = (coord && coord.lat && coord.lon) ? 
-    [coord.lat, coord.lon] : [-43.248910, -65.2620272];
+  const loc = (coord && coord.lat && coord.lon)
+    ? [coord.lat, coord.lon] : [-43.248910, -65.2620272];
   return (
     <div style={{ width: '100%', height: '500px' }}>
       <GoogleMapReact
