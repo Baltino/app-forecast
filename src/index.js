@@ -8,6 +8,7 @@ import './index.css';
 import store from './store';
 import saga from './sagas';
 import { sagaMiddleware } from './middleware';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => (
   <Provider store={store}>

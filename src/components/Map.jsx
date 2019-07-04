@@ -6,8 +6,9 @@ const AnyReactComponent = () => (
   <img className="map-marker" alt="marker" src="https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" />
 );
 
-const LocationMap = ({ location }) => {
-  const loc = location && location.length === 2 ? location : [-43.248910, -65.2620272];
+const LocationMap = ({ coord }) => {
+  const loc = (coord && coord.lat && coord.lon) ? 
+    [coord.lat, coord.lon] : [-43.248910, -65.2620272];
   return (
     <div style={{ width: '100%', height: '500px' }}>
       <GoogleMapReact
@@ -25,8 +26,9 @@ const LocationMap = ({ location }) => {
   );
 };
 LocationMap.propTypes = {
-  data: PropTypes.shape({
-    location: PropTypes.array.isRequired,
+  coord: PropTypes.shape({
+    lat: PropTypes.number.isRequired,
+    lon: PropTypes.number.isRequired,
   }).isRequired,
 };
 

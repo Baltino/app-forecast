@@ -1,9 +1,15 @@
 export const actionTypes = {
+  RESET_CITY: 'RESET_CITY',
   GET_CITY: 'GET_CITY',
   GET_CITY_SUCCESS: 'GET_CITY_SUCCESS',
   GET_CITY_FAILED: 'GET_CITY_FAILED',
 };
 
+export function resetCity() {
+  return {
+    type: actionTypes.RESET_CITY,
+  };
+}
 
 export function getCity(name) {
   return {
