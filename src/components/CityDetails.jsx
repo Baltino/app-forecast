@@ -8,14 +8,17 @@ import LocationMap from './Map';
 
 
 function CityDetails(props) {
-  const { city: { name, coord, main }, loading } = props;
+  const { city: { name, coord, main, weather }, loading } = props;
   if (loading) {
     return <Row> Searching.. </Row>;
   }
   return name ? (
     <Row style={{ marginTop: 20 }}>
       <Col md="4">
-        <h2>{name}</h2>
+        <h2>
+          {name}
+        </h2>
+        <h4>{weather.map(w => <p>{w.description}</p>)}</h4>
         <p>
           <b> Temperature:</b>
           <span>
@@ -63,6 +66,9 @@ CityDetails.propTypes = {
   loading: PropTypes.bool,
   city: PropTypes.shape({
     name: PropTypes.string,
+    weather: PropTypes.shape({
+      description: PropTypes.string.isRequired,
+    }),
     coord: PropTypes.shape({
       lat: PropTypes.number,
       long: PropTypes.number,

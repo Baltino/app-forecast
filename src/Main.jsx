@@ -9,7 +9,7 @@ function Main() {
     <div className="App">
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to Forecast App!</h2>
+        <h1>Forecast App</h1>
       </div>
       <HomeContainer />
     </div>

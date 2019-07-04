@@ -41,6 +41,9 @@ function* addCitySaga(action) {
     if (cities.filter(c => c.id === city.id).length) {
       return;
     }
+    if (cities.length >= 5) {
+      cities.shift();
+    }
     const allCities = [...cities, city];
     localStorage.setItem('userCities', JSON.stringify(allCities));
     yield put(addCitySuccess('addedCity', allCities));

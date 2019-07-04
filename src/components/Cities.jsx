@@ -13,7 +13,7 @@ function CityDetails(props) {
       <Col md="12">
         <h2>Last Visited</h2>
       </Col>
-      <ul>
+      <ul className="cities">
         {cities.map(c => (
           <li key={c.id}>
             <span onClick={() => clickedCity(c)}>{c.name}</span>

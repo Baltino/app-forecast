@@ -42,7 +42,7 @@ export default function citiesReducer(state = initialState, action) {
     case actionTypes.GET_USER_CITIES_SUCCESS:
       return {
         ...state,
-        userCities: action.payload.userCities,
+        userCities: action.payload.userCities || [],
       };
     case actionTypes.REMOVE_CITY_SUCCESS:
       return {
