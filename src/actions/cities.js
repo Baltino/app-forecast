@@ -5,7 +5,7 @@ export const actionTypes = {
 };
 
 
-export function getMedia(name) {
+export function getCity(name) {
   return {
     type: actionTypes.GET_CITY,
     payload: {

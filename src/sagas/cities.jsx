@@ -14,7 +14,7 @@ import { getCity } from '../api/cities';
 // worker sagas
 function* getCitySaga(action) {
   try {
-    const response = yield call(getCity, action.payload.titleId);
+    const response = yield call(getCity, action.payload.name);
     if (response) {
       yield put(getCitySuccess('successCity', response.data));
     } else {
